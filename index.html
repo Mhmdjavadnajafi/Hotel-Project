@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1><span>Enjoy</span> Your Stay</h1>
+        <p>We are blessed to have you in our hotel. Hope you will love our Hotel and visit again.</p>
+        <div id="buttonAbout">
+            About Our Hotl
+        </div>
+    </div>
+    <div class="section">
+        <div class="box two">
+            <h1><span class="history">The History </span>of Our Hotel</h1>
+            <h4>
+                The History of Our Hotel
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa, aliquam corrupti eum eligendi nulla ipsam? Libero itaque iure sunt deserunt, sequi ex voluptas aliquam dignissimos tenetur hic voluptatum quis aperiam odio repellat vitae aspernatur eius veniam sint optio voluptate unde cupiditate. Aliquid magnam voluptatibus iure recusandae harum itaque repellendus.</h4>
+            <div class="readmore">
+                read more
+            </div>    
+        </div>
+        <div class="box one">
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card location">
+            <h2>Location</h2>
+            <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, iusto?</h4>
+        </div>
+        <div class="card free">
+            <h2>Free Meal</h2>
+            <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, iusto?</h4>
+        </div>
+        <div class="card fitness">
+            <h2>Fitness Room</h2>
+            <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, iusto?</h4>
+        </div>
+
+    </div>
+    <footer>
+        <h3>Hotel MJN © 2023, All Right Reserved</h3>
+    </footer>
+    <script>
+        let getItems = document.getElementsByClassName('items')
+        let arr = Array.from(getItems)
+        for(i in arr){
+            let item = arr[i]
+            arr[i].innerText = arr[i].innerText[0].toUpperCase() + arr[i].innerText.slice(1)
+            item.style.fontSize = '20px'
+        }
+        const container = document.querySelector('.container')
+        container.style.height = '500px'
+        container.style.width = '100%'
+        // container.style.background = 'red'
+        container.style.fontSize = '30px'
+        let colorSpan = container.getElementsByTagName('span')[0]
+    colorSpan.style.color = 'rgba(255, 255, 0, 0.629)'
+    let pContainer = container.querySelector('p')
+    pContainer.style.fontSize = '18px'
+    pContainer.style.margin = '28px'
+    // let btnAbout = container.querySelector('#buttonAbout')
+    // btnAbout.style.background = '#333' 
+    // btnAbout.style.padding = '15px 15px' 
+    // btnAbout.style.fontSize = '20px' 
+    // btnAbout.style.color = 'white' 
+    let readmore = document.querySelector('.readmore')
+    let read = readmore.innerText.split(' ')
+    let newText = '';
+    read.forEach(function(text){
+        let first = text[0].toUpperCase();
+        let after = text.slice(1);
+        newText+= `${first}${after} `
+    })
+    readmore.innerText = newText
+    </script>
+</body>
+</html>
